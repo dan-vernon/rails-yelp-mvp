@@ -1,2 +1,14 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<div class="jumbotron">
+
+  <h1 class="bg-muted"><%= @restaurant.name %></h1>
+  <h3 class="display-5"><%= @restaurant.category.capitalize %></h3>
+  <small><%= @restaurant.address %> | <%= @restaurant.phone_number %></small>
+  <ul class="list-group">
+  <% @reviews.each do |review| %>
+  <li class="list-group-item lead"><%=  review.content %> <% review.rating.times do %><i class="fas fa-star"></i><% end %></li>
+  <% end %>
+  </ul>
+
+  <%= link_to "Add a review", new_restaurant_review_path(@restaurant)  %>
+
+</div>
