@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+gem 'faker', git: 'https://github.com/stympy/faker.git', branch: 'master'
 
 gem 'bootstrap-sass', '3.2.0.2'
 
